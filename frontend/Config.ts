@@ -17,8 +17,8 @@ const config: Config = {
    * to EAS Build.
    */
   localDevelopment: {
-    proseUrl: 'http://localhost:8929',
-    inferDevelopmentHost: true, // Specific to local development with Expo Go & the Android simulator. See docs.
+    proseUrl: 'https://prose.guildofentrepreneurs.com',
+    inferDevelopmentHost: false, // Specific to local development with Expo Go & the Android simulator. See docs.
   },
   /**
    * `buildChannels` refers to channels within Expo's EAS Build service, which are defined in
@@ -33,10 +33,10 @@ const config: Config = {
    */
   buildChannels: {
     preview: {
-      proseUrl: 'http://PLACEHOLDER.change.this.to.your.prose.url',
+      proseUrl: 'https://prose.guildofentrepreneurs.com',
     },
     production: {
-      proseUrl: 'http://PLACEHOLDER.change.this.to.your.prose.url',
+      proseUrl: 'https://prose.guildofentrepreneurs.com',
     },
   },
 };
