@@ -1,11 +1,11 @@
 import React from 'react';
-import { Platform, Text } from 'react-native';
+import { Platform } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ApolloProvider } from '@apollo/client';
 
 import { client } from './graphql/client';
 import { StorageProvider } from './helpers';
-// import AppNavigator from './navigation/AppNavigator';
+import AppNavigator from './navigation/AppNavigator';
 import { AppearanceProvider, ThemeProvider } from './theme';
 import { ModalProvider, OngoingLikedTopicProvider } from './utils';
 import { RequestError, Toast } from './components';
@@ -37,15 +37,14 @@ export default function App() {
             <AppearanceProvider>
               <ThemeProvider>
                 <>
-                  <Text>Hello World</Text>
-                  {/* <OngoingLikedTopicProvider>
+                  <OngoingLikedTopicProvider>
                     <ModalProvider>
                       <RequestError>
                         <AppNavigator />
                       </RequestError>
                     </ModalProvider>
                   </OngoingLikedTopicProvider>
-                   */}
+
                   <Toast />
                 </>
               </ThemeProvider>
