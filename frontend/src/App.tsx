@@ -7,12 +7,8 @@ import { client } from './graphql/client';
 import { StorageProvider } from './helpers';
 // import AppNavigator from './navigation/AppNavigator';
 import { AppearanceProvider, ThemeProvider } from './theme';
-import {
-  // ModalProvider,
-  OngoingLikedTopicProvider } from './utils';
-import {
-  // RequestError,
-  Toast } from './components';
+import { ModalProvider, OngoingLikedTopicProvider } from './utils';
+import { RequestError, Toast } from './components';
 
 if (Platform.OS === 'android') {
   require('intl');
@@ -35,13 +31,13 @@ if (__DEV__) {
 export default function App() {
   return (
     <>
-      <Text>Hello World</Text>
       <ApolloProvider client={client}>
         <StorageProvider>
           <SafeAreaProvider>
             <AppearanceProvider>
               <ThemeProvider>
                 <>
+                  <Text>Hello World</Text>
                   {/* <OngoingLikedTopicProvider>
                     <ModalProvider>
                       <RequestError>
@@ -49,7 +45,8 @@ export default function App() {
                       </RequestError>
                     </ModalProvider>
                   </OngoingLikedTopicProvider>
-                  <Toast /> */}
+                   */}
+                  <Toast />
                 </>
               </ThemeProvider>
             </AppearanceProvider>

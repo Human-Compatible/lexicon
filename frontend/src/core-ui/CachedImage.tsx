@@ -172,13 +172,14 @@ export default class CachedImage extends Component<Props> {
       this.props.setVisible
     ) {
       return (
-        <ImageView
-          images={[{ uri: source.uri }]}
-          imageIndex={0}
-          visible={this.props.visible}
-          onRequestClose={this.props.setVisible}
-          animationType="fade"
-        />
+        <></>
+        // <ImageView
+        //   images={[{ uri: source.uri }]}
+        //   imageIndex={0}
+        //   visible={this.props.visible}
+        //   onRequestClose={this.props.setVisible}
+        //   animationType="fade"
+        // />
       );
     } else {
       return <Image {...this.props} source={source} />;
