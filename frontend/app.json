@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "<insert your app name>",
-    "slug": "<insert your app slug>",
+    "name": "Guild of Entrepreneurs",
+    "slug": "guild-of-entrepreneurs",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

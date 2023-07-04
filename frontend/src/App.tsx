@@ -1,14 +1,18 @@
 import React from 'react';
-import { Platform } from 'react-native';
+import { Platform, Text } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ApolloProvider } from '@apollo/client';
 
 import { client } from './graphql/client';
 import { StorageProvider } from './helpers';
-import AppNavigator from './navigation/AppNavigator';
+// import AppNavigator from './navigation/AppNavigator';
 import { AppearanceProvider, ThemeProvider } from './theme';
-import { ModalProvider, OngoingLikedTopicProvider } from './utils';
-import { RequestError, Toast } from './components';
+import {
+  // ModalProvider,
+  OngoingLikedTopicProvider } from './utils';
+import {
+  // RequestError,
+  Toast } from './components';
 
 if (Platform.OS === 'android') {
   require('intl');
@@ -31,20 +35,21 @@ if (__DEV__) {
 export default function App() {
   return (
     <>
+      <Text>Hello World</Text>
       <ApolloProvider client={client}>
         <StorageProvider>
           <SafeAreaProvider>
             <AppearanceProvider>
               <ThemeProvider>
                 <>
-                  <OngoingLikedTopicProvider>
+                  {/* <OngoingLikedTopicProvider>
                     <ModalProvider>
                       <RequestError>
                         <AppNavigator />
                       </RequestError>
                     </ModalProvider>
                   </OngoingLikedTopicProvider>
-                  <Toast />
+                  <Toast /> */}
                 </>
               </ThemeProvider>
             </AppearanceProvider>

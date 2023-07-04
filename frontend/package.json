@@ -48,7 +48,7 @@
     "react-native-auto-grow-textinput": "^1.2.1",
     "react-native-dotenv": "^3.3.1",
     "react-native-gesture-handler": "~2.5.0",
-    "@staltz/react-native-image-viewing": "^0.2.1-2",
+    "react-native-image-viewing": "^0.2.2",
     "react-native-image-zoom-viewer": "^3.0.1",
     "react-native-keyboard-accessory": "^0.1.16",
     "react-native-keyboard-aware-scroll-view": "0.9.5",

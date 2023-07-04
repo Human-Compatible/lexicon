@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CachedImage from '../core-ui/CachedImage';
+// import CachedImage from '../core-ui/CachedImage';
 import { makeStyles } from '../theme';
 
 type Props = {
@@ -15,13 +15,14 @@ export function ShowImageModal(props: Props) {
   const { show, userImage, onPressCancel } = props;
 
   return (
-    <CachedImage
-      isBackground
-      source={userImage}
-      style={styles.imageDetail}
-      visible={show}
-      setVisible={onPressCancel}
-    />
+    <></>
+    // <CachedImage
+    //   isBackground
+    //   source={userImage}
+    //   style={styles.imageDetail}
+    //   visible={show}
+    //   setVisible={onPressCancel}
+    // />
   );
 }
 
