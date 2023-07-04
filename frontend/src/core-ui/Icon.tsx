@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Platform,
   Insets,
   StyleProp,
   TouchableOpacity,
@@ -23,9 +24,11 @@ type Props = {
 export { Props as IconProps };
 
 export function Icon(props: Props) {
-  return (<></>)
-
   const { colors, iconSizes } = useTheme();
+
+  if (Platform.OS === 'web') {
+    return (<></>);
+  }
 
   const {
     color = colors.primary,
