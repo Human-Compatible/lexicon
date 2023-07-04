@@ -71,6 +71,10 @@ function TabBar({ state, navigation: { navigate } }: BottomTabBarProps) {
 
 export default function TabNavigator() {
   return (
+    <Text>Hello World</Text>
+  );
+
+  return (
     <Tab.Navigator
       initialRouteName="Home"
       tabBar={(props) => <TabBar {...props} />}

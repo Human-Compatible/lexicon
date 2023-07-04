@@ -1,7 +1,7 @@
 export * from './ActivityIndicator';
 export * from './Avatar';
 export * from './Button';
-// export * from './CachedImage';
+export * from './CachedImage';
 export * from './ChatBubble';
 export * from './Chip';
 export * from './ChipRow';

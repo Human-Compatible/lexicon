@@ -1,5 +1,4 @@
 import React from 'react';
-import { Text } from 'react-native';
 import {
   DarkTheme,
   DefaultTheme,
@@ -48,15 +47,14 @@ export default function AppNavigator() {
 
   return (
     <>
-      <Text>Hello World</Text>
-      {/* <StatusBar style={darkMode ? 'light' : 'dark'} />
+      <StatusBar style={darkMode ? 'light' : 'dark'} />
       <NavigationContainer
         linking={linking}
         theme={darkMode ? DarkTheme : DefaultTheme}
         ref={navigationRef}
       >
         <RootStackNavigator />
-      </NavigationContainer> */}
+      </NavigationContainer>
     </>
   );
 }
