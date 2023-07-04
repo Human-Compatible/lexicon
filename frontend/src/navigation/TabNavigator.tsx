@@ -48,13 +48,13 @@ function TabBar({ state, navigation: { navigate } }: BottomTabBarProps) {
                 styles.tabItemContainer,
               ]}
             >
-              <Icon
+              {/* <Icon
                 name={route.name === 'Home' ? 'Home' : 'Person'}
                 size="xl"
                 color={
                   state.index === index ? colors.activeTab : colors.inactiveTab
                 }
-              />
+              /> */}
               <Text
                 color={state.index === index ? 'activeTab' : 'inactiveTab'}
                 size="xs"
@@ -70,10 +70,6 @@ function TabBar({ state, navigation: { navigate } }: BottomTabBarProps) {
 }
 
 export default function TabNavigator() {
-  return (
-    <Text>Hello World</Text>
-  );
-
   return (
     <Tab.Navigator
       initialRouteName="Home"
