@@ -1,0 +1,42 @@
+name: GH Pages
+
+on:
+  push:
+    branches:
+      - attempt-to-convert-to-web
+
+jobs:
+  GOE:
+    name: Guild of Entrepreneurs
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "yarn"
+          cache-dependency-path: frontend/yarn.lock
+
+      - name: Clean install dependencies
+        run: yarn
+
+      - name: Generate
+        run: yarn generate
+
+      - name: Export frontend
+        run: yarn export
+        working-directory: frontend
+
+      - name: Add GitHub Pages config files
+        run: |
+          echo lexicon.guildofentrepreneurs.com > CNAME
+          touch .nojekyll
+          cp index.html 404.html
+        working-directory: frontend/dist
+
+      - name: Deploy to gh-pages branch
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        with:
+          branch: gh-pages
+          folder: frontend/dist

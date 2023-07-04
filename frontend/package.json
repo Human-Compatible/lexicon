@@ -3,6 +3,7 @@
     "start": "expo start",
     "quickstart": "expo -c",
     "typecheck": "tsc --noEmit -p .",
+    "export": "expo export --platform web",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "format:check": "prettier --check \"src/**/*.{ts,tsx}\"",
     "lint": "eslint --max-warnings 0 \"src/**/*.{ts,tsx}\"",
