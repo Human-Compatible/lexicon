@@ -5,6 +5,9 @@ on:
     branches:
       - attempt-to-convert-to-web
 
+permissions:
+  contents: write
+
 jobs:
   GOE:
     name: Guild of Entrepreneurs
@@ -36,7 +39,7 @@ jobs:
         working-directory: frontend/dist
 
       - name: Deploy to gh-pages branch
-        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        uses: JamesIves/github-pages-deploy-action@v4.4.2
         with:
           branch: gh-pages
           folder: frontend/dist
