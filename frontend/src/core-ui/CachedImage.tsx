@@ -4,6 +4,7 @@
 
 import React, { Component } from 'react';
 import {
+  Platform,
   Image,
   ImageStyle,
   ImageURISource,
@@ -86,6 +87,10 @@ export default class CachedImage extends Component<Props> {
   }
 
   async getImageFilesystemKey(remoteURI: string) {
+    if (Platform.OS === "web") {
+      return "web";
+    }
+
     const hashed = await Crypto.digestStringAsync(
       Crypto.CryptoDigestAlgorithm.SHA256,
       remoteURI,
@@ -94,6 +99,10 @@ export default class CachedImage extends Component<Props> {
   }
 
   async loadImage(filesystemURI: string, remoteURI: string) {
+    if (Platform.OS === "web") {
+      return;
+    }
+
     // TODO: Migrate to a newer library or implement our own CachedImage
     // @ts-ignore
     if (this.downloadResumable && this.downloadResumable._removeSubscription) {
