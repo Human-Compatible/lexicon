@@ -23,6 +23,8 @@ type Props = {
 export { Props as IconProps };
 
 export function Icon(props: Props) {
+  return (<></>)
+
   const { colors, iconSizes } = useTheme();
 
   const {

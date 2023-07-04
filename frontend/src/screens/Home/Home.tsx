@@ -96,8 +96,6 @@ const headerViewHeight = 92;
 type SortOption = typeof sortOptionsArray[number];
 
 export default function Home() {
-  return (<></>);
-
   const { refetch: siteRefetch } = useSiteSettings();
   const styles = useStyles();
 
