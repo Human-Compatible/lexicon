@@ -2,8 +2,13 @@ import React from 'react';
 import * as Font from 'expo-font';
 import { CourierPrime_400Regular as Courier } from '@expo-google-fonts/courier-prime';
 import { CodedError } from 'expo-modules-core';
+import { Platform } from 'react-native';
 
 const loadFonts = async () => {
+  if (Platform.OS === 'web') {
+    return;
+  }
+
   return Font.loadAsync({
     // `Courier` is no longer included in iOS 15. We'll use `CourierPrime` as a
     // fallback for now. This is due to our dependency, `react-native-markdown-display`.

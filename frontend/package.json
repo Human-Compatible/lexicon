@@ -1,9 +1,8 @@
 {
   "scripts": {
-    "start": "expo start --dev-client",
+    "start": "expo start",
     "quickstart": "expo -c",
     "typecheck": "tsc --noEmit -p .",
-    "android": "expo run:android",
     "export": "expo export --platform web",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "format:check": "prettier --check \"src/**/*.{ts,tsx}\"",
@@ -13,8 +12,7 @@
     "eject": "expo eject",
     "graphql:generate": "graphql-codegen --config codegen.ts",
     "postinstall": "patch-package",
-    "eas-build-post-install": "yarn --cwd ../ && yarn --cwd ../ generate",
-    "ios": "expo run:ios"
+    "eas-build-post-install": "yarn --cwd ../ && yarn --cwd ../ generate"
   },
   "dependencies": {
     "@apollo/client": "^3.7.1",
