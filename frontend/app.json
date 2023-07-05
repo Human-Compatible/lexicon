@@ -14,7 +14,9 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "packagerOpts": {
       "config": "metro.config.js",
       "sourceExts": [
@@ -40,7 +42,8 @@
     },
     "android": {
       "permissions": [],
-      "versionCode": 1
+      "versionCode": 1,
+      "package": "com.refuge.guildofentrepreneurs"
     },
     "web": {
       "bundler": "metro",

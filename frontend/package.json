@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "start": "expo start",
+    "start": "expo start --dev-client",
     "quickstart": "expo -c",
     "typecheck": "tsc --noEmit -p .",
+    "android": "expo run:android",
     "export": "expo export --platform web",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "format:check": "prettier --check \"src/**/*.{ts,tsx}\"",
@@ -12,7 +13,8 @@
     "eject": "expo eject",
     "graphql:generate": "graphql-codegen --config codegen.ts",
     "postinstall": "patch-package",
-    "eas-build-post-install": "yarn --cwd ../ && yarn --cwd ../ generate"
+    "eas-build-post-install": "yarn --cwd ../ && yarn --cwd ../ generate",
+    "ios": "expo run:ios"
   },
   "dependencies": {
     "@apollo/client": "^3.7.1",
@@ -26,7 +28,7 @@
     "@react-navigation/native": "^6.0.11",
     "@react-navigation/stack": "^6.2.2",
     "apollo-upload-client": "^17.0.0",
-    "expo": "^46.0.0",
+    "expo": "~46.0.21",
     "expo-constants": "~13.2.4",
     "expo-crypto": "~11.0.0",
     "expo-file-system": "~14.1.0",
@@ -46,6 +48,7 @@
     "react-dom": "18.0.0",
     "react-hook-form": "^6",
     "react-native": "0.69.9",
+    "react-native-animation-library": "^0.0.8",
     "react-native-auto-grow-textinput": "^1.2.1",
     "react-native-dotenv": "^3.3.1",
     "react-native-gesture-handler": "~2.5.0",
@@ -128,5 +131,7 @@
     "trailingComma": "all",
     "arrowParens": "always"
   },
-  "private": true
+  "private": true,
+  "name": "frontend",
+  "version": "1.0.0"
 }
